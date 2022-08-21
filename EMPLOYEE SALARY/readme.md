@@ -9,7 +9,7 @@ db.employee.find({$and: [{gender: "Male"},{department: "Engineering"}]}).count()
 ### Count of Women in Engineering who earn less than one million
 
 ```bash
-db.employee.find({$and: [{gender: "Female"},{salary: {$lt: 1000000}}]}).count()
+db.employee.find({$and: [{gender: "Female"},{department: "Engineering"},{salary: {$lt: 1000000}}]}).count()
 ```
 
 ### Count of people make less than 80k
